@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Turing Cafe Reservations</h1>
+      <h1 className='app-title'>Turing Cafe Reservations</h1>
       <Form />
       <Reservations allReservations={allReservations}/>
     </div>
