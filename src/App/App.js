@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Reservations from './Reservations';
 import { useEffect, useState } from 'react';
+import Form from './Form';
 
 function App() {
   const [allReservations, setAllReservations] = useState([])
@@ -19,6 +20,8 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Turing Cafe Reservations</h1>
+      <Form />
       <Reservations allReservations={allReservations}/>
     </div>
   );
