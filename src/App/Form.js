@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Form.css';
 
-export default function Form({addReservation}){
+export default function Form({getReservations}){
     const [name, setName] = useState('')
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
@@ -17,8 +17,7 @@ export default function Form({addReservation}){
             number
         }
         postReservation(newReservation)
-        console.log(newReservation)
-        addReservation(newReservation)
+        getReservations()
         clearForm()
     }
 

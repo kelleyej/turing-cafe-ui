@@ -17,14 +17,10 @@ function App() {
     .then(data => setAllReservations(data))
   }
 
-  function addReservation(newReservation){
-    setAllReservations([...allReservations, newReservation])
-  }
-
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
-      <Form addReservation={addReservation}/>
+      <Form getReservations={getReservations}/>
       <Reservations allReservations={allReservations}/>
     </div>
   );
