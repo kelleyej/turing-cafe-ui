@@ -9,7 +9,6 @@ function App() {
 
   useEffect(() => {
     getReservations()
-    console.log(allReservations)
   }, [])
 
   function getReservations(){
@@ -18,10 +17,14 @@ function App() {
     .then(data => setAllReservations(data))
   }
 
+  function addReservation(newReservation){
+    setAllReservations([...allReservations, newReservation])
+  }
+
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
-      <Form />
+      <Form addReservation={addReservation}/>
       <Reservations allReservations={allReservations}/>
     </div>
   );
