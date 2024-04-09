@@ -1,6 +1,7 @@
 import './Card.css';
 
 export default function Card({id, name, date, time, number}){
+    
     return (
         <section className='card'>   
             <h3>{name}</h3>

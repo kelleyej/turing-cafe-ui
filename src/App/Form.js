@@ -16,9 +16,11 @@ export default function Form({getReservations}){
             time, 
             number
         }
+        
         postReservation(newReservation)
         getReservations()
         clearForm()
+        
     }
 
     function clearForm(){
@@ -44,7 +46,7 @@ export default function Form({getReservations}){
             <input type='text' name='date' value={date} placeholder='Date (mm/dd)' onChange={event => setDate(event.target.value)}/>
             <input type='text' name='time' value={time} placeholder='Time' onChange={event => setTime(event.target.value)}/>
             <input type='text' name='number' value={number} placeholder='Number of guests' onChange={event => setNumber(Number(event.target.value))}/>
-            <button onClick={handleSubmit}>Make Reservation</button>
+            <button onClick={event => handleSubmit(event)}>Make Reservation</button>
         </form>
     )
 }
