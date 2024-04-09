@@ -40,6 +40,17 @@ describe('Homepage', () => {
     cy.get("input[name='time']").type('12:30').should('have.value', '12:30')
     cy.get("input[name='number']").type('3').should('have.value', '3')
     cy.get('button').contains('Make Reservation').click()
+    cy.intercept('POST', 'http://localhost:3001/api/v1/reservations', {
+      statusCode: 201, 
+      body: [{
+        id: 11,
+        name: "Matt",
+        date: "4/9",
+        time: "12:30",
+        number: 3
+        }
+      ]
+    })
     cy.get('.reservation-container').last().contains('Matt')
   })
 })
