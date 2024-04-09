@@ -29,6 +29,17 @@ describe('Homepage', () => {
   })
   it('Should show user homepage to make and see reservations', () => {
     cy.get('h1').contains('Turing Cafe Reservations')
-    cy.
+    cy.get('form').contains('button', 'Make Reservation')
+    cy.get('.reservation-container').first().contains('Christie')
+    cy.get('.reservation-container').last().contains('Pam')
+    cy.get('.reservation-container').find('.card').should('have.length', 3)
+  })
+  it('Should show new reservation when click make reservation button', () => {
+    cy.get("input[name='name']").type('Matt').should('have.value', 'Matt')
+    cy.get("input[name='date']").type('4/9').should('have.value', '4/9')
+    cy.get("input[name='time']").type('12:30').should('have.value', '12:30')
+    cy.get("input[name='number']").type('3').should('have.value', '3')
+    cy.get('button').contains('Make Reservation').click()
+    cy.get('.reservation-container').last().contains('Matt')
   })
 })
