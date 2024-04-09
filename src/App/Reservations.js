@@ -1,4 +1,5 @@
 import Card from "./Card"
+import './Reservations.css';
 
 export default function Reservations({allReservations}){
     const reservations = allReservations.map(reservation => {
@@ -16,7 +17,7 @@ export default function Reservations({allReservations}){
     })
 
     return (
-        <main>
+        <main className="reservation-container">
             {reservations}
         </main>
     )
