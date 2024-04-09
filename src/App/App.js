@@ -17,6 +17,12 @@ function App() {
     .then(data => setAllReservations(data))
   }
 
+  function deleteReservation(id){
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE'
+    })
+  }
+
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
