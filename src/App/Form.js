@@ -19,6 +19,14 @@ export default function Form({addReservation}){
         postReservation(newReservation)
         console.log(newReservation)
         addReservation(newReservation)
+        clearForm()
+    }
+
+    function clearForm(){
+        setName('')
+        setDate('')
+        setTime('')
+        setNumber('')
     }
 
     function postReservation(newReservation){
