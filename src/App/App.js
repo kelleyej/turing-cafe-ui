@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     getReservations()
+    console.log(allReservations)
   }, [])
 
   function getReservations(){
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Reservations />
+      <Reservations allReservations={allReservations}/>
     </div>
   );
 }
