@@ -20,10 +20,10 @@ export default function Form({addReservation}){
 
     return (
         <form>
-            <input type='text' name='name' value={name} onChange={event => setName(event.target.value)}/>
-            <input type='text' name='date' value={date} onChange={event => setDate(event.target.value)}/>
-            <input type='text' name='time' value={time} onChange={event => setTime(event.target.value)}/>
-            <input type='text' name='number' value={number} onChange={event => setNumber(event.target.value)}/>
+            <input type='text' name='name' value={name} placeholder='Name' onChange={event => setName(event.target.value)}/>
+            <input type='text' name='date' value={date} placeholder='Date (mm/dd)' onChange={event => setDate(event.target.value)}/>
+            <input type='text' name='time' value={time} placeholder='Time' onChange={event => setTime(event.target.value)}/>
+            <input type='text' name='number' value={number} placeholder='Number of guests' onChange={event => setNumber(event.target.value)}/>
             <button onClick={handleSubmit}>Make Reservation</button>
         </form>
     )

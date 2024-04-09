@@ -29,5 +29,6 @@ describe('Homepage', () => {
   })
   it('Should show user homepage to make and see reservations', () => {
     cy.get('h1').contains('Turing Cafe Reservations')
+    cy.
   })
 })
