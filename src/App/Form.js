@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Form.css';
 
 export default function Form({addReservation}){
     const [name, setName] = useState('')
