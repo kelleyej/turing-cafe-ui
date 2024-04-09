@@ -3,6 +3,7 @@
     border: solid 5px teal;
     color: teal;
     width: 225px;
+    border-radius: 10px; 
 }
 
 button {
@@ -11,6 +12,6 @@ button {
     margin-bottom: 4%; 
     width: 180px; 
     border: none; 
-    height: 20px; 
+    height: 25px; 
     cursor: pointer; 
 }
